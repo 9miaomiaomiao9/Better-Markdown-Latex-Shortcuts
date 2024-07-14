@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
         })
       }).then(() => {
         if (!editor) { return }
-        sel = sel.sort((a, b) => a.start.isBefore(b.start) ? -1 : 1)
+        sel = Array.from(sel).sort((a, b) => a.start.isBefore(b.start) ? -1 : 1)
         let count = 0
         let lst = -1
         editor.selections = sel.map((selection) => {
@@ -62,7 +62,7 @@ export function activate(context: vscode.ExtensionContext) {
         })
       }).then(() => {
         if (!editor) { return }
-        sel = sel.sort((a, b) => a.start.isBefore(b.start) ? -1 : 1)
+        sel = Array.from(sel).sort((a, b) => a.start.isBefore(b.start) ? -1 : 1)
         let count = 0
         let lst = -1
         editor.selections = sel.map((selection) => {
@@ -408,7 +408,7 @@ export function activate(context: vscode.ExtensionContext) {
         content = match[1]
         end = '\n$' + line.text.slice(match.index + match[0].length, line.text.length)
       }
-      const relations = ['=', '\\cong', '\\thickapprox', '\\neq', '<', '>', '\\le', '\\ge', '\\leqslant', '\\geqslant']
+      const relations = ['=', '\\cong', '\\thickapprox', '\\neq', '<', '>', '\\leq', '\\geq', '\\leqslant', '\\geqslant']
       let bracketCount = 0
       let lst = 0
       let cur = 0
