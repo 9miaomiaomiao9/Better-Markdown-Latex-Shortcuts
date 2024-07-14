@@ -1,4 +1,4 @@
-##### 修复了上一版本`ali`环境自动化中将通过识别`\le`导致`left`和`leq`被错误隔开的bug
+##### 修复了原作者`OrangeX4`设置`ali`环境识别`\le`来添加`&`导致`\left`和`\leq`被错误隔开的bug,使用不等号请用`\leq`
 # Better Markdown & Latex Shortcuts
 
 ## 单选
