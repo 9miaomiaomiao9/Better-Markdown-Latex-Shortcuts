@@ -1,3 +1,4 @@
+##### 修复了上一版本`ali`环境自动化中将通过识别`\le`导致`left`和`leq`被错误隔开的bug
 # Better Markdown & Latex Shortcuts
 
 ## 单选
